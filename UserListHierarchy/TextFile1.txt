@@ -1,0 +1,10 @@
+﻿Java's HashMap will replace the existing value with the new one.
+.NET's Dictionary will replace the existing value with the new one if you use [] indexing. If you use the Add method, it will instead throw an ArgumentException.
+Attempting to get a non-existent key
+Java's HashMap will return null.
+.NET's Dictionary will throw a KeyNotFoundException. You can use the TryGetValue method instead of the [] indexing to avoid this:
+MyObject value = null;
+if (!myDictionary.TryGetValue(key, out value)) { /* key doesn't exist */ }
+Dictionary's has a ContainsKey method that can help deal with the previous two problems.
+
+https://www.dotnetperls.com/map
