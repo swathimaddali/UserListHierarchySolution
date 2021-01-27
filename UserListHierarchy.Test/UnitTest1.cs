@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using UserListHierarchy;
 
 namespace UserListHierarchy.Test
 {
@@ -9,25 +10,25 @@ namespace UserListHierarchy.Test
     public class UserListHierarchyTest
     {
         static List<User> Users = new List<User>();
-        static List<role> Roles = new List<role>();
+        static List<Role> Roles = new List<Role>();
         static Dictionary<int, List<int>> result = new Dictionary<int, List<int>>();
 
 
         [TestInitialize]
         public void InitializeData()
-        {          
-
-            User user1 = new User { name = "Adam", id = 1, role = 1 };
-            User user2 = new User { name = "Emily", id = 2, role = 4 };
-            User user3 = new User { name = "Sam", id = 3, role = 3 };
-            User user4 = new User { name = "Mary", id = 4, role = 2 };
-            User user5 = new User { name = "Steve", id = 5, role = 5 };
-
-            Role role1 = new Role { id = 1, name = "Admin", pid = 0 };
-            Role role2 = new Role { id = 2, name = "LM", pid = 1 };
-            Role role3 = new Role { id = 3, name = "Sup", pid = 2 };
-            Role role4 = new Role { id = 4, name = "Emp", pid = 3 };
-            Role role5 = new Role { id = 5, name = "Trainee", pid = 4 };
+        {
+            Users.Add(new User { name = "Adam", id = 1, role = 1 });
+            Users.Add(new User { name = "Adam", id = 1, role = 1 });
+            Users.Add(new User { name = "Emily", id = 2, role = 4 });
+            Users.Add(new User { name = "Sam", id = 3, role = 3 });
+            Users.Add(new User { name = "Mary", id = 4, role = 2 });
+            Users.Add(new User { name = "Steve", id = 5, role = 5 });
+            
+            Roles.Add(new Role { id = 1, name = "Admin", pid = 0 });
+            Roles.Add(new Role { id = 2, name = "LM", pid = 1 });
+            Roles.Add(new Role { id = 3, name = "Sup", pid = 2 });
+            Roles.Add(new Role { id = 4, name = "Emp", pid = 3 });
+            Roles.Add(new Role { id = 5, name = "Trainee", pid = 4 });
 
           
         }
