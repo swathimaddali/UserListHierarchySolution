@@ -9,6 +9,11 @@ namespace UserListHierarchy
         public int id { get; set; }
         public string name { get; set; }
         public int pid { get; set; }
+
+
+
+
+
     }
 
 }
